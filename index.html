@@ -9,7 +9,14 @@
     <style>
       .attribution { font-size: 11px; text-align: center; }
       .attribution a { color: hsl(228, 45%, 44%); }
+      .is__ready {
+        visibility: hidden;
+      }
     </style>
+    <script>
+      const el = document.getElementsByTagName("html");
+      el[0].classList.add("is__ready")
+    </script>
   </head>
   <body>
     <div id="app" class="theme__one">
@@ -33,7 +40,8 @@
           </section>
         </header>
         <section class="screen">
-          <p class="displayCal">399,981</p>
+          <!-- <p class="displayCal">399,981</p> -->
+          <p class="displayCal">0</p>
         </section>
         <section id="keyPad" class="keyPad">
 
@@ -41,10 +49,14 @@
       </section>
       <div class="attribution">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-        Coded by <a href="#">Your Name Here</a>.
+        Coded by <a href="https://www.linkedin.com/in/alfredthompsonovie/" target="_blank">ALfred Thompson Ovie</a>.
       </div>
     </div>
     <script type="module" src="/main.js"></script>
-
+    <script>
+      window.addEventListener("DOMContentLoaded", ()=>{
+        el[0].classList.remove("is__ready")
+      })
+    </script>
   </body>
 </html>

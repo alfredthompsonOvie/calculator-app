@@ -93,32 +93,6 @@
 	/* ----------------------------------------------------------------- */
 	--fs_numbers: 32px;
 	--fw: 700;
-	/* ### Font */
-
-	/* - Family: [Spartan](https://fonts.google.com/specimen/Spartan) */
-	/*  */
-	/* 
-mainBackground
-toggleBackground
-keypadBackground
-screenBackground
-
-keyBackground
-keyShadow
-
-
-
-
-
-
-
-## Typography
-
-### Body Copy
-
-
-
-  */
 }
 *,
 *::before,
@@ -187,7 +161,9 @@ body {
   box-shadow: 0px 4px 0px var(--DarkRed_keyShadow);
   color: var(--White);
 }
-
+.theme__one .attribution a {
+  color: var(--Red_keyBackground_toggle);
+}
 /* ---------------------------------------------------------------- */
 /* ---------------------------------------------------------------- */
 .theme__two {
@@ -220,6 +196,9 @@ body {
   box-shadow: 0px 4px 0px var(--DarkOrange_keyShadow);
   color: var(--White);
 }
+.theme__two .attribution a {
+  color: var(--Orange_keyBackground_toggle);
+}
 /* ---------------------------------------------------------------- */
 /* ---------------------------------------------------------------- */
 .theme__three {
@@ -230,7 +209,6 @@ body {
   background-color: var(--PureCyan_keyBackground_toggle);
 }
 .theme__three .keyPad, .theme__three .themes__btn__container, .theme__three .screen  {
-  /* VeryDarkViolet_toggleBackground_keypadBackground_screenBackground */
   background-color: var(--VeryDarkViolet_toggleBackground_keypadBackground_screenBackground);
 }
 
@@ -248,6 +226,9 @@ body {
   background-color: var(--PureCyan_keyBackground_toggle);
   box-shadow: 0px 4px 0px var(--SoftCyan_keyShadow);
   color: var(--VeryDarkBlue);
+}
+.theme__three .attribution a {
+  color: var(--PureCyan_keyBackground_toggle);
 }
 /* ---------------------------------------------------------------- */
 /* ---------------------------------------------------------------- */
@@ -267,7 +248,6 @@ h1 {
 }
 .theme {
   display: flex;
-  /* align-items: center; */
   align-items: flex-end;
   font-size: .9rem;
   gap: .7em;
@@ -279,7 +259,6 @@ h1 {
   justify-content: space-evenly;
   gap: .3em;
   width: 3.4em;
-  /* background-color: red; */
 }
 .themes__btn__container {
   display: flex;
@@ -288,13 +267,8 @@ h1 {
   border-radius: 8px;
   padding: .2em;
   margin-top: .2em;
-  /* width: 4em; */
-
 }
-/* ! THEME SELECTOR */
-/* -------------------------------------------- */
-/* -------------------------------------------- */
-/* -------------------------------------------- */
+
 .themes__btn__container button {
   width: .8em;
   height: .8em;
@@ -302,9 +276,6 @@ h1 {
   background-color: transparent;
 }
 
-/* .cur__active{} */
-/* -------------------------------------------- */
-/* -------------------------------------------- */
 .screen, .keyPad {
   padding: 1em;
   border-radius: 8px;
@@ -312,19 +283,14 @@ h1 {
 .screen {
   height: 2.6em;
   width: 100%;
-  margin: 1em 0;
+  margin: .7em 0 .5em;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   font-size: var(--fs_numbers);
   font-weight: var(--fw);
-  /* padding: 1em 0; */
 }
-.screen p {
-  /* text-align: right; */
-  /* height: 100%; */
-  /* vertical-align: middle; */
-}
+
 .keyPad {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -343,6 +309,5 @@ h1 {
 	transform: translateY(4px);
 }
 .keyPad__btn[data-keyPad='RESET'], .keyPad__btn[data-keyPad='='] {
-  /* background-color: ; */
   grid-column: span 2;
 }
